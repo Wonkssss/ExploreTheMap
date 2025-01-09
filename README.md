@@ -1,6 +1,6 @@
 # Explore the Map! 🎮
 
-![Pokemon Glimpse](PokemonGlimpse.png)
+![Pokemon Glimpse](assets/PokemonGlimpse.png)
 
 ## Overview 🗺️
 

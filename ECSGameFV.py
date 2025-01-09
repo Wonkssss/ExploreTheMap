@@ -19,7 +19,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Catch Pokeballs!")
 
 # Load the TMX map
-tmx_data = load_pygame("mapPokemon1.tmx")
+tmx_data = load_pygame("assets/mapPokemon1.tmx")
 
 # Calculate zoom level to fit the map to the screen size
 map_width = tmx_data.width * TILE_SIZE
@@ -230,7 +230,7 @@ class Entity:
 player = Entity()
 player.add_component('position', PositionComponent(map_width // 2, map_height - 100))
 player.add_component('velocity', VelocityComponent(1))
-player.add_component('sprite', SpriteComponent("sacha.png", 64, 64, 0.4))  # Adjust frame size and scale
+player.add_component('sprite', SpriteComponent("assets/sacha.png", 64, 64, 0.4))  # Adjust frame size and scale
 
 # Create camera entity
 camera = Entity()
@@ -255,7 +255,7 @@ while len(collectibles) < 5:
     if not any(pokeball_rect.colliderect(collidable['collidable'].rect) for collidable in collidables):
         collectible = Entity()
         collectible.add_component('position', PositionComponent(x, y))
-        collectible.add_component('sprite', SpriteComponent("pokeball.png", 32, 32, 1))  # No scaling needed for pokeball
+        collectible.add_component('sprite', SpriteComponent("assets/pokeball.png", 32, 32, 1))  # No scaling needed for pokeball
         collectible.add_component('collectible', CollectibleComponent(pokeball_rect))
         collectibles.append(collectible)
 
